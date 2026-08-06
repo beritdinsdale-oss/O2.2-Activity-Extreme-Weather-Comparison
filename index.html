@@ -4,127 +4,139 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Climate Patterns in Action</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=final1">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
-  <div class="wrap">
-    <p class="eyebrow">Module 2 activity</p>
-    <h1>Climate Patterns in Action</h1>
-    <p class="lede">
-      Climate includes average conditions, seasonal variability, and long-term
-      patterns of extreme weather. Compare events across regions, seasons, and
-      decades to build a more complete climate picture.
-    </p>
+  <div class="wrap header-grid">
+    <div>
+      <p class="eyebrow">Module 2 activity</p>
+      <h1>Climate Patterns in Action</h1>
+      <p class="lede">
+        Climate includes averages, seasonal variation, regional variation,
+        and long-term patterns of extreme weather.
+      </p>
+    </div>
+    <div class="header-idea" role="note">
+      <strong>Central idea</strong>
+      <span>An individual event is weather.</span>
+      <span>Patterns observed over many years are climate.</span>
+    </div>
   </div>
 </header>
 
 <main id="main" class="wrap" tabindex="-1">
   <nav class="progress" aria-label="Activity sections">
     <button type="button" class="progress-step active" data-go="0">Start</button>
-    <button type="button" class="progress-step" data-go="1">Compare regions</button>
-    <button type="button" class="progress-step" data-go="2">Compare seasons</button>
-    <button type="button" class="progress-step" data-go="3">Compare time</button>
-    <button type="button" class="progress-step" data-go="4">Climate picture</button>
+    <button type="button" class="progress-step" data-go="1">Regions</button>
+    <button type="button" class="progress-step" data-go="2">Seasons</button>
+    <button type="button" class="progress-step" data-go="3">Time</button>
+    <button type="button" class="progress-step" data-go="4">Summary</button>
   </nav>
 
   <section class="screen active" data-screen="0" aria-labelledby="start-heading">
     <div class="intro-grid">
       <div>
-        <h2 id="start-heading">What will stay the same—and what will change?</h2>
+        <p class="section-kicker">Before you begin</p>
+        <h2 id="start-heading">Three controlled comparisons</h2>
         <p>
-          Each chapter holds some factors constant so you can focus on one type
-          of variation at a time.
+          Each chapter keeps some details the same so you can focus on one
+          difference at a time.
         </p>
 
         <div class="comparison-overview">
           <article>
-            <p class="overview-number">1</p>
+            <span class="number">1</span>
             <h3>Compare regions</h3>
-            <p><strong>Same:</strong> year and season</p>
-            <p><strong>Different:</strong> region and event</p>
+            <p><strong>Hold constant:</strong> summer 2021</p>
+            <p><strong>Change:</strong> region and hazard</p>
           </article>
           <article>
-            <p class="overview-number">2</p>
+            <span class="number">2</span>
             <h3>Compare seasons</h3>
-            <p><strong>Same:</strong> year and region</p>
-            <p><strong>Different:</strong> season and event</p>
+            <p><strong>Hold constant:</strong> Willamette Valley, 2021</p>
+            <p><strong>Change:</strong> season and hazard</p>
           </article>
           <article>
-            <p class="overview-number">3</p>
+            <span class="number">3</span>
             <h3>Compare time</h3>
-            <p><strong>Same:</strong> country</p>
-            <p><strong>Different:</strong> decades</p>
+            <p><strong>Hold constant:</strong> United States</p>
+            <p><strong>Change:</strong> decades</p>
           </article>
         </div>
 
         <button type="button" class="primary begin">Begin activity</button>
       </div>
 
-      <aside class="definition">
-        <h3>Keep this idea in view</h3>
-        <p class="definition-main">
-          Climate patterns include patterns of extreme weather.
-        </p>
+      <aside class="definition-card">
+        <h3>Climate includes extreme weather</h3>
         <p>
-          An individual event is weather. The kinds, timing, frequency, and
-          intensity of extreme weather observed over many years are part of climate.
+          Climate is not limited to average temperature and precipitation.
+          It also includes patterns in the types, timing, frequency, and
+          intensity of extreme weather.
         </p>
       </aside>
     </div>
   </section>
 
   <section class="screen" data-screen="1" aria-labelledby="regions-heading">
-    <div class="comparison-banner region-banner">
-      <p class="chapter-label">Chapter 1</p>
-      <h2 id="regions-heading">Compare regions</h2>
-      <div class="variable-grid">
+    <header class="chapter-header region-theme">
+      <div>
+        <p class="section-kicker">Chapter 1</p>
+        <h2 id="regions-heading">Compare regions</h2>
+      </div>
+      <div class="comparison-facts" aria-label="Comparison variables">
         <p><span>Same year</span><strong>2021</strong></p>
         <p><span>Same season</span><strong>Summer</strong></p>
-        <p class="different"><span>Compare</span><strong>Region</strong></p>
+        <p class="changed"><span>What changes?</span><strong>Region</strong></p>
       </div>
-    </div>
+    </header>
 
-    <p class="chapter-question">
-      How could the same summer of 2021 bring extreme heat to one region and
-      record flooding to another?
+    <p class="chapter-prompt">
+      How could the same summer bring extreme heat to one part of the country
+      and record flooding to another?
     </p>
 
-    <div class="comparison-rule" role="note"><strong>Held constant:</strong> Summer 2021 &nbsp; <strong>Changed:</strong> Region and extreme-weather type</div>
-
     <div class="event-grid">
-      <article class="event-card heat-event">
-        <div class="event-heading">
-          <span class="event-symbol" aria-hidden="true">☀</span>
+      <article class="event-card heat-card">
+        <div class="event-title">
+          <div class="event-icon heat-icon" aria-hidden="true">☀</div>
           <div>
-            <p class="event-meta">Pacific Northwest · Summer 2021</p>
+            <p>Pacific Northwest · Summer 2021</p>
             <h3>Extreme heat</h3>
           </div>
         </div>
 
-        <section class="summary-box" aria-labelledby="heat-summary-heading">
-          <h4 id="heat-summary-heading">What happened?</h4>
+        <div class="visual-summary heat-visual" role="img"
+             aria-label="Stylized temperature display representing extreme heat">
+          <span>116°F</span>
+          <small>Portland's record high during the June 2021 heat event</small>
+        </div>
+
+        <section class="info-box what-box">
+          <h4>What happened?</h4>
           <ul>
-            <li>Record-breaking heat affected Oregon, Washington, and nearby areas.</li>
-            <li>Communities opened cooling centers and faced serious health risks.</li>
+            <li>Record temperatures affected western Oregon and the broader Pacific Northwest.</li>
+            <li>Communities opened cooling centers and faced severe health risks.</li>
             <li>Infrastructure, trees, landscapes, and gardens experienced heat stress.</li>
           </ul>
         </section>
 
-        <section class="connection-box">
+        <section class="info-box connection-box">
           <h4>Climate connection</h4>
           <p>
-            A warmer climate raises the temperature baseline. When a hot weather
-            pattern develops, it can produce more intense and record-breaking heat.
+            A warmer climate raises the temperature baseline. When a weather
+            pattern produces hot conditions, it can now produce more intense
+            and record-breaking heat.
           </p>
         </section>
 
-        <section class="evidence-box evidence-strong">
-          <div class="evidence-header">
+        <section class="evidence-box strong">
+          <div class="evidence-heading">
             <h4>Evidence meter</h4>
-            <span class="evidence-label">Strong evidence</span>
+            <strong>Strong evidence</strong>
           </div>
           <div class="meter" aria-label="Strong scientific evidence">
             <span></span><span></span><span></span>
@@ -138,29 +150,36 @@
         <a class="explore-link"
            href="https://www.pbs.org/newshour/show/sweltering-temperatures-in-pacific-northwest-dredge-up-fears-of-wildfires"
            target="_blank" rel="noopener">
-          Explore the heat event
+          <strong>Explore the heat event</strong>
           <span>Optional PBS report · opens in a new tab</span>
         </a>
       </article>
 
-      <article class="event-card flood-event">
-        <div class="event-heading">
-          <span class="event-symbol" aria-hidden="true">☂</span>
+      <article class="event-card flood-card">
+        <div class="event-title">
+          <div class="event-icon flood-icon" aria-hidden="true">☂</div>
           <div>
-            <p class="event-meta">Waverly, Tennessee · Summer 2021</p>
+            <p>Waverly, Tennessee · Summer 2021</p>
             <h3>Record rainfall and flash flooding</h3>
           </div>
         </div>
-<section class="summary-box" aria-labelledby="flood-summary-heading">
-          <h4 id="flood-summary-heading">What happened?</h4>
+
+        <div class="visual-summary flood-visual" role="img"
+             aria-label="Stylized rainfall display representing record precipitation">
+          <span>20.73 in.</span>
+          <small>Tennessee's verified 24-hour rainfall record near the event area</small>
+        </div>
+
+        <section class="info-box what-box">
+          <h4>What happened?</h4>
           <ul>
-            <li>More than 20 inches of rain fell in parts of Middle Tennessee within 24 hours.</li>
-            <li>Flash flooding devastated Waverly and surrounding communities.</li>
-            <li>The event illustrates a very different summer hazard from Pacific Northwest heat.</li>
+            <li>More than 20 inches of rain fell within 24 hours near Waverly.</li>
+            <li>Flash flooding devastated homes, roads, and communities.</li>
+            <li>This summer hazard was very different from Pacific Northwest heat.</li>
           </ul>
         </section>
 
-        <section class="connection-box">
+        <section class="info-box connection-box">
           <h4>Climate connection</h4>
           <p>
             Warmer air can hold more water vapor. When storms form, that added
@@ -168,90 +187,98 @@
           </p>
         </section>
 
-        <section class="evidence-box evidence-strong">
-          <div class="evidence-header">
+        <section class="evidence-box strong">
+          <div class="evidence-heading">
             <h4>Evidence meter</h4>
-            <span class="evidence-label">Strong evidence</span>
+            <strong>Strong evidence</strong>
           </div>
           <div class="meter" aria-label="Strong scientific evidence">
             <span></span><span></span><span></span>
           </div>
           <p>
-            Scientists have strong evidence that heavy precipitation has increased
-            in many parts of the United States, though the amount of change differs by region.
+            Heavy precipitation has increased in many parts of the United States,
+            although the amount of change differs by region.
           </p>
         </section>
 
         <a class="explore-link"
            href="https://www.pbs.org/newshour/show/major-flooding-leaves-22-dead-in-tennessee-amid-devastating-loss-and-heartache"
            target="_blank" rel="noopener">
-          Explore the Tennessee flood event
+          <strong>Explore the flood event</strong>
           <span>Optional PBS report · opens in a new tab</span>
         </a>
       </article>
     </div>
 
     <section class="interaction" aria-labelledby="regions-question">
-      <h3 id="regions-question">What does the comparison show?</h3>
+      <h3 id="regions-question">What does this comparison show?</h3>
       <fieldset data-question="regions">
-        <legend class="visually-hidden">Choose one answer</legend>
+        <legend class="visually-hidden">Choose the best answer</legend>
         <label><input type="radio" name="regions" value="a"> Every region experiences the same extreme weather during summer.</label>
         <label><input type="radio" name="regions" value="b"> Extreme weather can differ across regions, even during the same season.</label>
-        <label><input type="radio" name="regions" value="c"> Flooding occurs only in the eastern United States.</label>
-        <button type="button" class="primary check-answer">Check the comparison</button>
+        <label><input type="radio" name="regions" value="c"> Heavy rainfall occurs only in the southeastern United States.</label>
+        <button type="button" class="primary check-answer">Check answer</button>
         <p class="feedback" aria-live="polite"></p>
       </fieldset>
     </section>
   </section>
 
   <section class="screen" data-screen="2" aria-labelledby="seasons-heading">
-    <div class="comparison-banner season-banner">
-      <p class="chapter-label">Chapter 2</p>
-      <h2 id="seasons-heading">Compare seasons</h2>
-      <div class="variable-grid">
+    <header class="chapter-header season-theme">
+      <div>
+        <p class="section-kicker">Chapter 2</p>
+        <h2 id="seasons-heading">Compare seasons</h2>
+      </div>
+      <div class="comparison-facts" aria-label="Comparison variables">
         <p><span>Same year</span><strong>2021</strong></p>
         <p><span>Same region</span><strong>Willamette Valley</strong></p>
-        <p class="different"><span>Compare</span><strong>Season</strong></p>
+        <p class="changed"><span>What changes?</span><strong>Season</strong></p>
       </div>
-    </div>
+    </header>
 
-    <p class="chapter-question">
-      How can one region experience very different extreme weather during
-      different seasons?
+    <p class="chapter-prompt">
+      How could the Willamette Valley experience a damaging ice storm in winter
+      and record heat in summer of the same year?
     </p>
 
     <div class="event-grid">
-      <article class="event-card ice-event">
-        <div class="event-heading">
-          <span class="event-symbol" aria-hidden="true">❄</span>
+      <article class="event-card ice-card">
+        <div class="event-title">
+          <div class="event-icon ice-icon" aria-hidden="true">❄</div>
           <div>
-            <p class="event-meta">Willamette Valley · Winter 2021</p>
+            <p>Willamette Valley · Winter 2021</p>
             <h3>Ice storm</h3>
           </div>
         </div>
 
-        <section class="summary-box" aria-labelledby="ice-summary-heading">
-          <h4 id="ice-summary-heading">What happened?</h4>
+        <div class="visual-summary ice-visual" role="img"
+             aria-label="Stylized ice accumulation display">
+          <span>Up to 1.5 in.</span>
+          <small>Reported ice accumulation in portions of the region</small>
+        </div>
+
+        <section class="info-box what-box">
+          <h4>What happened?</h4>
           <ul>
-            <li>Freezing rain coated trees, roads, and power lines with ice.</li>
+            <li>Freezing rain coated roads, trees, and power lines with ice.</li>
             <li>Falling limbs and damaged equipment caused widespread outages.</li>
-            <li>Some Willamette Valley communities remained without power for days.</li>
+            <li>Some communities remained without power for days.</li>
           </ul>
         </section>
 
-        <section class="connection-box">
+        <section class="info-box connection-box">
           <h4>Climate connection</h4>
           <p>
-            A warming climate does not eliminate winter weather. Cold and freezing
-            conditions still occur, while the timing, location, and characteristics
-            of winter hazards may change.
+            A warming climate does not eliminate winter weather. Cold conditions
+            still occur, while the timing, location, and characteristics of
+            winter hazards may change.
           </p>
         </section>
 
-        <section class="evidence-box evidence-evolving">
-          <div class="evidence-header">
+        <section class="evidence-box evolving">
+          <div class="evidence-heading">
             <h4>Evidence meter</h4>
-            <span class="evidence-label">Evidence still evolving</span>
+            <strong>Evidence still evolving</strong>
           </div>
           <div class="meter" aria-label="Scientific evidence is still evolving">
             <span></span><span></span><span class="empty"></span>
@@ -265,131 +292,137 @@
         <a class="explore-link"
            href="https://www.kgw.com/article/news/local/most-destructive-freezing-rain-event-in-40-years-slows-pge-power-restorations/283-95c917e6-aa7c-44fa-b8a1-6dbbcb209ca0"
            target="_blank" rel="noopener">
-          Explore the Willamette Valley ice storm
-          <span>KGW report · opens in a new tab</span>
+          <strong>Explore the ice storm</strong>
+          <span>Optional KGW report · opens in a new tab</span>
         </a>
       </article>
 
-      <article class="event-card heat-event">
-        <div class="event-heading">
-          <span class="event-symbol" aria-hidden="true">☀</span>
+      <article class="event-card heat-card">
+        <div class="event-title">
+          <div class="event-icon heat-icon" aria-hidden="true">☀</div>
           <div>
-            <p class="event-meta">Willamette Valley · Summer 2021</p>
+            <p>Willamette Valley · Summer 2021</p>
             <h3>Extreme heat</h3>
           </div>
         </div>
 
-        <section class="summary-box">
+        <div class="visual-summary heat-visual" role="img"
+             aria-label="Stylized temperature display representing extreme heat">
+          <span>116°F</span>
+          <small>Portland's record high during the June 2021 heat event</small>
+        </div>
+
+        <section class="info-box what-box">
           <h4>What happened?</h4>
           <ul>
-            <li>Temperatures reached levels far outside normal summer conditions.</li>
+            <li>Temperatures reached levels far outside typical summer conditions.</li>
             <li>The heat affected people, infrastructure, plants, and ecosystems.</li>
-            <li>This summer hazard contrasted sharply with the winter ice storm.</li>
+            <li>The summer hazard contrasted sharply with the winter ice storm.</li>
           </ul>
         </section>
 
-        <section class="connection-box">
+        <section class="info-box connection-box">
           <h4>Climate connection</h4>
           <p>
-            Summer extreme heat has a clear connection to a warming climate:
-            higher average temperatures make unusually hot conditions more likely.
+            Higher average temperatures make unusually hot conditions more
+            likely. The connection between warming and extreme heat is direct
+            and well established.
           </p>
         </section>
 
-        <section class="evidence-box evidence-strong">
-          <div class="evidence-header">
+        <section class="evidence-box strong">
+          <div class="evidence-heading">
             <h4>Evidence meter</h4>
-            <span class="evidence-label">Strong evidence</span>
+            <strong>Strong evidence</strong>
           </div>
           <div class="meter" aria-label="Strong scientific evidence">
             <span></span><span></span><span></span>
           </div>
           <p>
-            The evidence linking human-caused warming with more frequent and
-            intense extreme heat is much stronger than the evidence for ice storms.
+            Scientists are much more confident about the influence of climate
+            change on extreme heat than on regional ice-storm frequency.
           </p>
         </section>
 
         <a class="explore-link"
            href="https://www.pbs.org/newshour/show/sweltering-temperatures-in-pacific-northwest-dredge-up-fears-of-wildfires"
            target="_blank" rel="noopener">
-          Explore the heat event
+          <strong>Explore the heat event</strong>
           <span>Optional PBS report · opens in a new tab</span>
         </a>
       </article>
     </div>
 
     <section class="interaction" aria-labelledby="seasons-question">
-      <h3 id="seasons-question">What does the comparison show?</h3>
+      <h3 id="seasons-question">What does this comparison show?</h3>
       <fieldset data-question="seasons">
-        <legend class="visually-hidden">Choose one answer</legend>
-        <label><input type="radio" name="seasons" value="a"> The type of extreme weather can change with the season.</label>
+        <legend class="visually-hidden">Choose the best answer</legend>
+        <label><input type="radio" name="seasons" value="a"> One region can experience different extreme weather during different seasons.</label>
         <label><input type="radio" name="seasons" value="b"> Climate change eliminates winter weather.</label>
-        <label><input type="radio" name="seasons" value="c"> The evidence connecting every extreme event to climate change is equally strong.</label>
-        <button type="button" class="primary check-answer">Check the comparison</button>
+        <label><input type="radio" name="seasons" value="c"> Scientists have equal confidence about every extreme-weather connection.</label>
+        <button type="button" class="primary check-answer">Check answer</button>
         <p class="feedback" aria-live="polite"></p>
       </fieldset>
     </section>
   </section>
 
   <section class="screen" data-screen="3" aria-labelledby="time-heading">
-    <div class="comparison-banner time-banner">
-      <p class="chapter-label">Chapter 3</p>
-      <h2 id="time-heading">Compare time</h2>
-      <div class="variable-grid two-variable">
-        <p><span>Same country</span><strong>United States</strong></p>
-        <p class="different"><span>Compare</span><strong>Decades</strong></p>
+    <header class="chapter-header time-theme">
+      <div>
+        <p class="section-kicker">Chapter 3</p>
+        <h2 id="time-heading">Compare time</h2>
       </div>
-    </div>
+      <div class="comparison-facts two" aria-label="Comparison variables">
+        <p><span>Same country</span><strong>United States</strong></p>
+        <p class="changed"><span>What changes?</span><strong>Decades</strong></p>
+      </div>
+    </header>
 
-    <p class="chapter-question">
-      What becomes visible when scientists examine extreme-weather indicators
-      over many decades rather than focusing on one event?
+    <p class="chapter-prompt">
+      Individual events cannot show a climate trend. What becomes visible when
+      scientists examine observations collected over decades?
     </p>
 
-    <div class="time-content">
-      <section class="indicator-panel" aria-labelledby="indicators-heading">
-        <h3 id="indicators-heading">What long-term indicators show</h3>
-        <div class="indicator-list">
-          <article>
-            <span class="indicator-symbol" aria-hidden="true">☀</span>
-            <div>
-              <h4>Extreme heat</h4>
-              <p>Heat waves have become more frequent and the heat-wave season has lengthened.</p>
-            </div>
-          </article>
-          <article>
-            <span class="indicator-symbol" aria-hidden="true">☂</span>
-            <div>
-              <h4>Heavy precipitation</h4>
-              <p>Heavy precipitation has increased nationally, with substantial regional differences.</p>
-            </div>
-          </article>
-          <article>
-            <span class="indicator-symbol" aria-hidden="true">❄</span>
-            <div>
-              <h4>Cold and winter extremes</h4>
-              <p>Extreme cold has generally become less common, while individual winter hazards remain possible.</p>
-            </div>
-          </article>
-        </div>
-
-        <a class="explore-link report-link"
+    <div class="time-grid">
+      <section class="trend-panel" aria-labelledby="trend-heading">
+        <h3 id="trend-heading">Long-term indicators</h3>
+        <article>
+          <span aria-hidden="true">☀</span>
+          <div>
+            <h4>Extreme heat</h4>
+            <p>Heat waves are more frequent, last longer, and the season is longer.</p>
+          </div>
+        </article>
+        <article>
+          <span aria-hidden="true">☂</span>
+          <div>
+            <h4>Heavy precipitation</h4>
+            <p>Heavy precipitation has increased nationally, with regional differences.</p>
+          </div>
+        </article>
+        <article>
+          <span aria-hidden="true">❄</span>
+          <div>
+            <h4>Cold extremes</h4>
+            <p>Unusually cold temperatures have generally become less common.</p>
+          </div>
+        </article>
+        <a class="explore-link"
            href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P101AXFE.TXT"
            target="_blank" rel="noopener">
-          Explore EPA Climate Change Indicators
+          <strong>Explore EPA climate indicators</strong>
           <span>Optional long-term evidence source · opens in a new tab</span>
         </a>
       </section>
 
       <aside class="why-panel">
-        <h3>Why does climate change affect extremes?</h3>
-        <ol>
-          <li><strong>The climate warms.</strong> Average conditions shift.</li>
-          <li><strong>Weather develops in those changed conditions.</strong></li>
-          <li><strong>Probabilities shift.</strong> Some extremes become more likely or intense.</li>
-          <li><strong>Scientists observe the pattern over decades.</strong></li>
-        </ol>
+        <h3>Why do the probabilities change?</h3>
+        <div class="why-steps">
+          <p><span>1</span><strong>Greenhouse gases warm the climate.</strong></p>
+          <p><span>2</span><strong>Weather develops within those warmer conditions.</strong></p>
+          <p><span>3</span><strong>The likelihood or intensity of some extremes changes.</strong></p>
+          <p><span>4</span><strong>Scientists detect those patterns over many years.</strong></p>
+        </div>
         <p class="nuance">
           Climate change does not affect every hazard equally or produce the same
           result in every region.
@@ -397,79 +430,75 @@
       </aside>
     </div>
 
-    <section class="evidence-box evidence-strong overall-evidence">
-      <div class="evidence-header">
+    <section class="evidence-box strong overall">
+      <div class="evidence-heading">
         <h3>Evidence meter: the larger pattern</h3>
-        <span class="evidence-label">Strong evidence</span>
+        <strong>Strong evidence</strong>
       </div>
       <div class="meter" aria-label="Strong scientific evidence">
         <span></span><span></span><span></span>
       </div>
       <p>
         Long-term observations provide strong evidence that human-caused climate
-        change is altering the frequency or intensity of several kinds of extreme
-        weather, especially extreme heat and heavy precipitation. Scientists assess
-        each hazard separately because the evidence and mechanisms differ.
+        change is altering the frequency or intensity of several types of extreme
+        weather. Scientists assess each hazard separately because the mechanisms
+        and evidence differ.
       </p>
     </section>
 
     <section class="interaction" aria-labelledby="time-question">
       <h3 id="time-question">What does the long-term view add?</h3>
       <fieldset data-question="time">
-        <legend class="visually-hidden">Choose one answer</legend>
+        <legend class="visually-hidden">Choose the best answer</legend>
         <label><input type="radio" name="time" value="a"> It shows whether patterns in frequency or intensity are changing over decades.</label>
         <label><input type="radio" name="time" value="b"> It proves climate change caused every individual event.</label>
-        <label><input type="radio" name="time" value="c"> It shows every extreme-weather type is increasing equally everywhere.</label>
-        <button type="button" class="primary check-answer">Check the comparison</button>
+        <label><input type="radio" name="time" value="c"> It shows every type of extreme weather is increasing equally everywhere.</label>
+        <button type="button" class="primary check-answer">Check answer</button>
         <p class="feedback" aria-live="polite"></p>
       </fieldset>
     </section>
   </section>
 
-  <section class="screen" data-screen="4" aria-labelledby="picture-heading">
-    <h2 id="picture-heading">The climate picture</h2>
-    <p class="final-intro">
-      The three comparisons reveal different parts of the same idea.
-    </p>
+  <section class="screen" data-screen="4" aria-labelledby="summary-heading">
+    <p class="section-kicker">Activity summary</p>
+    <h2 id="summary-heading">The climate picture</h2>
 
-    <div class="final-grid">
+    <div class="summary-grid">
       <article>
-        <p class="final-number">1</p>
-        <h3>Across regions</h3>
-        <p>Extreme weather can differ from place to place during the same season.</p>
+        <span class="number">1</span>
+        <h3>Regional variation</h3>
+        <p>Different regions can experience different hazards during the same season.</p>
       </article>
       <article>
-        <p class="final-number">2</p>
-        <h3>Across seasons</h3>
-        <p>One region can experience different extreme weather during different seasons.</p>
+        <span class="number">2</span>
+        <h3>Seasonal variation</h3>
+        <p>One region can experience different hazards during different seasons.</p>
       </article>
       <article>
-        <p class="final-number">3</p>
-        <h3>Across time</h3>
-        <p>Long-term records reveal changes in frequency and intensity.</p>
+        <span class="number">3</span>
+        <h3>Long-term change</h3>
+        <p>Decades of observations reveal changes in frequency and intensity.</p>
       </article>
     </div>
 
-    <div class="climate-definition">
-      <p class="definition-equation">
-        Average conditions
-        <span aria-hidden="true">+</span>
-        seasonal and regional variability
-        <span aria-hidden="true">+</span>
-        patterns of extreme weather
-        <span aria-hidden="true">=</span>
-        <strong>Climate</strong>
-      </p>
+    <div class="climate-equation" aria-label="Climate includes averages, variation, and extreme-weather patterns">
+      <span>Average conditions</span>
+      <b aria-hidden="true">+</b>
+      <span>Regional and seasonal variation</span>
+      <b aria-hidden="true">+</b>
+      <span>Patterns of extreme weather</span>
+      <b aria-hidden="true">=</b>
+      <strong>Climate</strong>
     </div>
 
-    <div class="final-callout">
+    <div class="takeaway">
       <h3>Key takeaway</h3>
       <p>
-        An individual extreme event is weather. Patterns in the kinds, timing,
+        An individual extreme event is weather. Patterns in the types, timing,
         location, frequency, and intensity of extreme weather over many years
         are part of climate. As climate changes, the conditions in which weather
-        develops also change—but scientists are more confident about some
-        extreme-weather connections than others.
+        develops also change—but the evidence is stronger for some hazards than
+        for others.
       </p>
     </div>
 
@@ -480,8 +509,8 @@
 <footer>
   <div class="wrap">
     <p>
-      The activity contains all required information. External event stories and
-      EPA resources are optional enrichment and open in a new browser tab.
+      All required information is included in this activity. External event
+      stories and EPA resources are optional enrichment.
     </p>
   </div>
 </footer>
@@ -492,6 +521,6 @@
   <button type="button" class="primary" id="next">Next</button>
 </nav>
 
-<script src="app.js?v=3"></script>
+<script src="app.js?v=final1"></script>
 </body>
 </html>

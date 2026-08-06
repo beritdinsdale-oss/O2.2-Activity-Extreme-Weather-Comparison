@@ -9,9 +9,9 @@ let current=0;
 
 const correct={regions:"b",seasons:"a",time:"a"};
 const messages={
-  regions:"Yes. The comparison holds the season constant and shows that extreme weather can differ across regions.",
-  seasons:"Yes. The comparison holds the region and year constant and shows that extreme weather can differ by season.",
-  time:"Yes. Long-term records reveal changes in frequency or intensity that cannot be seen from one event."
+  regions:"Correct. The comparison holds the year and season constant and shows regional variation in extreme weather.",
+  seasons:"Correct. The comparison holds the year and region constant and shows seasonal variation in extreme weather.",
+  time:"Correct. Long-term records reveal changes in frequency or intensity that cannot be identified from one event."
 };
 
 function show(index){
@@ -40,12 +40,14 @@ document.querySelectorAll(".check-answer").forEach(button=>{
     const feedback=fieldset.querySelector(".feedback");
     if(!selected){
       feedback.className="feedback incorrect";
-      feedback.textContent="Choose one statement before checking the comparison.";
+      feedback.textContent="Choose an answer before checking.";
       return;
     }
     const isCorrect=selected.value===correct[id];
     feedback.className=`feedback ${isCorrect?"correct":"incorrect"}`;
-    feedback.textContent=isCorrect?messages[id]:"That statement is not supported by the comparison. Review what stayed the same and what changed.";
+    feedback.textContent=isCorrect
+      ? messages[id]
+      : "Not quite. Review what stayed the same and what changed, then try again.";
   });
 });
 

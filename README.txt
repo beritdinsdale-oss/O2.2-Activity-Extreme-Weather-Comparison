@@ -1,94 +1,83 @@
-Climate Patterns in Action — Version 2
-======================================
+Climate Patterns in Action — Final Clean Build
+================================================
 
-Upload these four files to the root of a GitHub repository:
+UPLOAD THESE FILES
+------------------
+Upload all four files to the root of the GitHub repository:
 
 - index.html
 - styles.css
 - app.js
 - README.txt
 
-ACTIVITY PURPOSE
-----------------
-The activity makes three comparisons explicit:
+This package contains NO embedded videos and NO NOAA video players.
 
-1. COMPARE REGIONS
-   Same season; different regions and extreme-weather examples.
+OPTIONAL EXTERNAL RESOURCES
+---------------------------
+The activity contains all required information. The external links are optional:
 
-2. COMPARE SEASONS
-   Same year and Willamette Valley region; winter ice storm and summer heat.
+- Pacific Northwest extreme heat: PBS NewsHour
+- Waverly, Tennessee flooding: PBS NewsHour
+- Willamette Valley ice storm: KGW
+- Long-term climate indicators: U.S. EPA
 
-3. COMPARE TIME
-   U.S. long-term climate indicators across decades.
-
-The activity repeatedly states that patterns of extreme weather are part of
-climate.
-
-EXTERNAL RESOURCES
+ACTIVITY STRUCTURE
 ------------------
-External resources are optional. Learners can complete the activity using the
-short summary boxes, climate connections, and evidence meters.
+1. Compare regions
+   - Same year: 2021
+   - Same season: summer
+   - Pacific Northwest heat versus Waverly, Tennessee flooding
 
-- Pacific Northwest extreme heat:
-  PBS NewsHour external report.
+2. Compare seasons
+   - Same year: 2021
+   - Same region: Willamette Valley
+   - Winter ice storm versus summer extreme heat
 
-- Vermont flooding:
-  PBS NewsHour 2½-minute external report.
-
-- Willamette Valley ice storm:
-  KGW external report.
-
-- Long-term indicators:
-  EPA Climate Change Indicators, Fifth Edition.
-
-EVIDENCE METERS
----------------
-The evidence meter communicates that scientific confidence differs by hazard:
-
-- Extreme heat: strong evidence
-- Heavy precipitation: strong evidence, with regional variation
-- Willamette Valley ice storms: evidence still evolving
-- Overall changes in several extremes: strong evidence
+3. Compare time
+   - Same country: United States
+   - Compare long-term observations across decades
 
 ACCESSIBILITY
 -------------
-- External videos are not required.
-- Essential content appears as text within each event card.
+- Essential information is contained in text, not external media.
+- Large base type and controls.
 - Semantic headings, lists, fieldsets, legends, and labels.
-- Keyboard-operable controls and navigation.
+- Full keyboard operation.
 - Visible focus indicators.
-- Large base text and controls.
-- Feedback is announced through aria-live.
-- Evidence levels use labels and text, not color alone.
-- Responsive layout and reduced-motion support.
+- Dynamic feedback announced with aria-live.
+- Evidence meters include written labels and explanations.
+- Color is never the only carrier of meaning.
+- Responsive layout for Canvas and smaller screens.
+- Reduced-motion preference is supported.
 
-SAME-YEAR REGIONAL COMPARISON
------------------------------
-The regional comparison now uses two events from summer 2021:
+PREVIEWING LOCALLY
+------------------
+1. Download the ZIP.
+2. Select Extract All.
+3. Keep all four files in the same folder.
+4. Open the extracted index.html in Chrome.
 
-- Pacific Northwest extreme heat
-- Waverly, Tennessee record rainfall and flash flooding
-
-NOAA confirmed 20.73 inches of rain at McEwen, Tennessee, as a new
-state 24-hour precipitation record for the August 21, 2021 event.
-
-LOCAL PREVIEW
--------------
-Extract the entire ZIP before opening index.html. The HTML file depends on
-styles.css and app.js being in the same folder. Opening index.html by itself
-from a file preview, email attachment, or GitHub file viewer will not show the
-intended design.
-
+If index.html is opened inside a ZIP preview or GitHub code viewer, styles.css
+and app.js may not load correctly.
 
 CANVAS EMBED
 ------------
-After enabling GitHub Pages, use:
+After GitHub Pages is enabled, use:
 
 <iframe
   src="YOUR_GITHUB_PAGES_URL"
   title="Climate Patterns in Action"
   width="100%"
-  height="1150"
+  height="1200"
   style="border:0; width:100%;"
   loading="eager">
 </iframe>
+
+SOURCE NOTES
+------------
+- NOAA verified 20.73 inches near McEwen, Tennessee as a state 24-hour
+  precipitation record for the August 21, 2021 flood.
+- EPA Climate Change Indicators, Fifth Edition, is the source for the long-term
+  indicator summaries.
+- The evidence meter intentionally distinguishes strong evidence for extreme
+  heat and heavy precipitation from evolving evidence about regional ice storms.
