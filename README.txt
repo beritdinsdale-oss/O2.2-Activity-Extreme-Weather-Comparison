@@ -6,8 +6,8 @@ UPLOAD THESE FILES
 Upload all four files to the root of the GitHub repository:
 
 - index.html
-- styles.css
-- app.js
+- climate-patterns-final-20260806.css
+- climate-patterns-final-20260806.js
 - README.txt
 
 This package contains NO embedded videos and NO NOAA video players.
@@ -81,3 +81,18 @@ SOURCE NOTES
   indicator summaries.
 - The evidence meter intentionally distinguishes strong evidence for extreme
   heat and heavy precipitation from evolving evidence about regional ice storms.
+
+
+VERIFYING THE CLEAN BUILD
+-------------------------
+The page header must display:
+
+Clean build · August 6, 2026
+
+If that label is not visible, an older index.html is being opened.
+
+The regional chapter must show:
+- Pacific Northwest extreme heat
+- Waverly, Tennessee record rainfall and flash flooding
+
+There are no embedded NOAA video players in this package.
