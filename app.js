@@ -1,1 +1,61 @@
-"use strict";const screens=[...document.querySelectorAll('.screen')],steps=[...document.querySelectorAll('.progress button')],prev=document.querySelector('#prev'),next=document.querySelector('#next'),pos=document.querySelector('#position');let current=0;const correct={places:'b',seasons:'a',time:'a'},messages={places:'Climate pattern added: the same season can bring different kinds of extreme weather to different regions.',seasons:'Climate pattern added: a region’s extreme-weather patterns can vary by season.',time:'Climate pattern added: long-term records show whether the frequency or intensity of extremes is changing.'};function show(i){current=Math.max(0,Math.min(i,screens.length-1));screens.forEach((s,n)=>s.classList.toggle('active',n===current));steps.forEach((s,n)=>{s.classList.toggle('active',n===current);s.classList.toggle('complete',n<current)});prev.disabled=current===0;next.disabled=current===screens.length-1;pos.textContent=`${steps[current].textContent}: ${current+1} of ${screens.length}`;window.scrollTo({top:0,behavior:'smooth'})}steps.forEach((s,i)=>s.addEventListener('click',()=>show(i)));document.querySelector('.begin').addEventListener('click',()=>show(1));prev.addEventListener('click',()=>show(current-1));next.addEventListener('click',()=>show(current+1));document.querySelectorAll('.check').forEach(btn=>btn.addEventListener('click',()=>{const fs=btn.closest('fieldset'),id=fs.dataset.q,sel=fs.querySelector(`input[name="${id}"]:checked`),fb=fs.querySelector('.feedback');if(!sel){fb.className='feedback incorrect';fb.textContent='Choose one statement first.';return}const ok=sel.value===correct[id];fb.className=`feedback ${ok?'correct':'incorrect'}`;fb.textContent=ok?messages[id]:'That statement is not supported by the examples. Review the comparison and try again.'}));document.querySelector('.restart').addEventListener('click',()=>{document.querySelectorAll('input[type="radio"]').forEach(i=>i.checked=false);document.querySelectorAll('.feedback').forEach(f=>{f.textContent='';f.className='feedback'});show(0)});show(0);
+"use strict";
+
+const screens=[...document.querySelectorAll(".screen")];
+const steps=[...document.querySelectorAll(".progress-step")];
+const previous=document.querySelector("#previous");
+const next=document.querySelector("#next");
+const position=document.querySelector("#position");
+let current=0;
+
+const correct={regions:"b",seasons:"a",time:"a"};
+const messages={
+  regions:"Yes. The comparison holds the season constant and shows that extreme weather can differ across regions.",
+  seasons:"Yes. The comparison holds the region and year constant and shows that extreme weather can differ by season.",
+  time:"Yes. Long-term records reveal changes in frequency or intensity that cannot be seen from one event."
+};
+
+function show(index){
+  current=Math.max(0,Math.min(index,screens.length-1));
+  screens.forEach((screen,i)=>screen.classList.toggle("active",i===current));
+  steps.forEach((step,i)=>{
+    step.classList.toggle("active",i===current);
+    step.classList.toggle("complete",i<current);
+  });
+  previous.disabled=current===0;
+  next.disabled=current===screens.length-1;
+  position.textContent=`${steps[current].textContent}: ${current+1} of ${screens.length}`;
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+steps.forEach((step,i)=>step.addEventListener("click",()=>show(i)));
+document.querySelector(".begin").addEventListener("click",()=>show(1));
+previous.addEventListener("click",()=>show(current-1));
+next.addEventListener("click",()=>show(current+1));
+
+document.querySelectorAll(".check-answer").forEach(button=>{
+  button.addEventListener("click",()=>{
+    const fieldset=button.closest("fieldset");
+    const id=fieldset.dataset.question;
+    const selected=fieldset.querySelector(`input[name="${id}"]:checked`);
+    const feedback=fieldset.querySelector(".feedback");
+    if(!selected){
+      feedback.className="feedback incorrect";
+      feedback.textContent="Choose one statement before checking the comparison.";
+      return;
+    }
+    const isCorrect=selected.value===correct[id];
+    feedback.className=`feedback ${isCorrect?"correct":"incorrect"}`;
+    feedback.textContent=isCorrect?messages[id]:"That statement is not supported by the comparison. Review what stayed the same and what changed.";
+  });
+});
+
+document.querySelector(".restart").addEventListener("click",()=>{
+  document.querySelectorAll('input[type="radio"]').forEach(input=>input.checked=false);
+  document.querySelectorAll(".feedback").forEach(feedback=>{
+    feedback.textContent="";
+    feedback.className="feedback";
+  });
+  show(0);
+});
+
+show(0);
