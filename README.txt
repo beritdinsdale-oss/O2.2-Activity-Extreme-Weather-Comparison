@@ -1,6 +1,8 @@
 Climate Patterns in Action — Final Clean Build
 ================================================
 
+Deployment refresh: 8/6/2026
+
 UPLOAD THESE FILES
 ------------------
 Upload all four files to the root of the GitHub repository:
