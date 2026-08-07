@@ -1,55 +1,79 @@
-Climate Patterns in Action — revised multi-screen version
+Climate Patterns in Action — Clean Rebuild
+==========================================
 
-Upload:
+FILES
+-----
+Upload all five files to the root of the GitHub repository:
 - index.html
 - styles.css
 - app.js
+- oregon-garden-welcome.jpg
 - README.txt
 
-Changes:
-- Removed public-facing "Clean build" label.
-- Each chapter now uses three screens:
-  1. video/story choices
-  2. short comparison + climate connection + evidence meter
-  3. one focused question
-- Lighter, brighter visual design.
-- External videos remain optional and open in new tabs.
-- Essential information remains in the activity for accessibility.
+NEW STRUCTURE
+-------------
+Welcome
+- Lighter, more playful welcome page
+- Oregon Garden photo
 
-Visual explainer revision:
-- Removed broken external embeds.
-- Removed archived NOAA Climate.gov dependency.
-- Added self-contained heat, heavy-precipitation, and freezing-rain visuals.
-- Updated optional links to current NASA and Fifth National Climate Assessment resources.
+Compare Regions
+1. Event videos + brief summaries
+2. Climate explanation videos + short reveal visuals + evidence meters
+3. Drag-and-drop activity on its own page
+4. Synthesis question
 
-V2 source revision:
-- Removed text-heavy optional links from the heat and precipitation mechanism pages.
-- Essential climate science remains fully contained in the activity visuals.
-- Replaced the EPA text-report link in Compare Time with the Fifth National Climate Assessment figure gallery.
+Compare Seasons
+1. Different videos from the Regions section:
+   - 2021 Oregon ice storm explainer
+   - OPB: How heat waves are changing in the Pacific Northwest
+2. Climate explanation + visual mechanisms + evidence meters
+3. Drag-and-drop/sort activity on its own page
+4. Synthesis question
 
-Regional comparison rebuild:
-Page 1: event videos + accessible summaries
-- Pacific Northwest heat: TcU8YNYQmGg
-- Waverly rainfall: gDvWd8uphXk
+Compare Over Time
+- Self-contained trend summaries
+- Current EPA Extreme Heat link:
+  https://www.epa.gov/climatechange-science/extreme-heat
+- Current EPA Extreme Precipitation link:
+  https://www.epa.gov/climatechange-science/extreme-precipitation
+- No dependency on the previously broken National Climate Assessment figure link
 
-Page 2: climate explanation videos + interactive mechanism + evidence meter
-- Heat climate explanation: LdRV9OjpYEY
-- Rain/flood climate explanation: w-dbv4F4i3k
+DRAG-AND-DROP ACCESSIBILITY
+---------------------------
+The activity supports both:
+1. Dragging a card to a destination.
+2. Selecting a card and then selecting its destination.
 
-Page 3: existing summary question
+This makes the activity usable without precise mouse dragging.
 
-YouTube embeds use youtube-nocookie.com.
+PHOTO
+-----
+Welcome photo:
+Pet-Friendly Garden in Oregon Garden
+Author: Rick Obst
+Source: Wikimedia Commons / Flickr
+License: Creative Commons Attribution 2.0 (CC BY 2.0)
+https://commons.wikimedia.org/wiki/File:Pet-Friendly_Garden_in_Oregon_Garden.jpg
 
-Season comparison updated to match the Regions structure:
-1. Event videos + short summaries
-   - Ice storm explainer/event: KGW, bD_VkWPEUP8
-   - Pacific Northwest heat event: TcU8YNYQmGg
-2. Climate explanation + accessible drag/drop
-   - Ice storm: sort what scientists know vs what is still being studied
-   - Heat: sequence warming -> warmer baseline -> more likely/intense extreme heat
-3. Existing summary question
+VIDEO IDS
+---------
+Regions event heat: TcU8YNYQmGg
+Regions event rainfall: gDvWd8uphXk
+Regions climate heat: LdRV9OjpYEY
+Regions climate rain: w-dbv4F4i3k
 
-Drag/drop also works without dragging:
-- Select a card.
-- Select its destination.
-This provides a keyboard-friendly alternative.
+Seasons ice: bD_VkWPEUP8
+Seasons heat (different video): _ruKbQogo3c
+
+CANVAS
+------
+After GitHub Pages finishes deploying:
+
+<iframe
+  src="YOUR_GITHUB_PAGES_URL"
+  title="Climate Patterns in Action"
+  width="100%"
+  height="1200"
+  style="border:0; width:100%;"
+  loading="eager">
+</iframe>
