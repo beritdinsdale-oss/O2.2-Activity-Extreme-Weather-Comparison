@@ -39,3 +39,17 @@ Page 2: climate explanation videos + interactive mechanism + evidence meter
 Page 3: existing summary question
 
 YouTube embeds use youtube-nocookie.com.
+
+Season comparison updated to match the Regions structure:
+1. Event videos + short summaries
+   - Ice storm explainer/event: KGW, bD_VkWPEUP8
+   - Pacific Northwest heat event: TcU8YNYQmGg
+2. Climate explanation + accessible drag/drop
+   - Ice storm: sort what scientists know vs what is still being studied
+   - Heat: sequence warming -> warmer baseline -> more likely/intense extreme heat
+3. Existing summary question
+
+Drag/drop also works without dragging:
+- Select a card.
+- Select its destination.
+This provides a keyboard-friendly alternative.
