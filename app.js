@@ -6,4 +6,15 @@ const names={0:"Start",1:"Regions: stories",2:"Regions: comparison",3:"Regions: 
 function show(i){current=Math.max(0,Math.min(i,screens.length-1));screens.forEach((s,n)=>s.classList.toggle("active",n===current));steps.forEach(step=>{const t=Number(step.dataset.go);const group=(t===1&&current>=1&&current<=3)||(t===4&&current>=4&&current<=6)||(t===7&&current>=7&&current<=9);step.classList.toggle("active",t===current||group);step.classList.toggle("complete",t<current)});previous.disabled=current===0;next.disabled=current===screens.length-1;position.textContent=`${names[current]} · ${current+1} of ${screens.length}`;window.scrollTo({top:0,behavior:"smooth"})}
 steps.forEach(s=>s.addEventListener("click",()=>show(Number(s.dataset.go))));document.querySelector(".begin").addEventListener("click",()=>show(1));previous.addEventListener("click",()=>show(current-1));next.addEventListener("click",()=>show(current+1));
 document.querySelectorAll(".check-answer").forEach(btn=>btn.addEventListener("click",()=>{const f=btn.closest("fieldset"),id=f.dataset.question,sel=f.querySelector(`input[name="${id}"]:checked`),fb=f.querySelector(".feedback");if(!sel){fb.className="feedback incorrect";fb.textContent="Choose an answer before checking.";return}const ok=sel.value===correct[id];fb.className=`feedback ${ok?"correct":"incorrect"}`;fb.textContent=ok?messages[id]:"Not quite. Review the comparison on the previous page and try again."}));
-document.querySelector(".restart").addEventListener("click",()=>{document.querySelectorAll('input[type="radio"]').forEach(i=>i.checked=false);document.querySelectorAll(".feedback").forEach(f=>{f.textContent="";f.className="feedback"});show(0)});show(0);
+document.querySelector(".restart").addEventListener("click",()=>{document.querySelectorAll('input[type="radio"]').forEach(i=>i.checked=false);document.querySelectorAll(".feedback").forEach(f=>{f.textContent="";f.className="feedback"});show(0)});
+document.querySelectorAll(".mechanism-button").forEach(button=>{
+  button.setAttribute("aria-expanded","false");
+  button.addEventListener("click",()=>{
+    const target=document.getElementById(button.dataset.detail);
+    const expanded=button.getAttribute("aria-expanded")==="true";
+    button.setAttribute("aria-expanded",String(!expanded));
+    target.hidden=expanded;
+  });
+});
+
+show(0);

@@ -21,3 +21,21 @@ Visual explainer revision:
 - Removed archived NOAA Climate.gov dependency.
 - Added self-contained heat, heavy-precipitation, and freezing-rain visuals.
 - Updated optional links to current NASA and Fifth National Climate Assessment resources.
+
+V2 source revision:
+- Removed text-heavy optional links from the heat and precipitation mechanism pages.
+- Essential climate science remains fully contained in the activity visuals.
+- Replaced the EPA text-report link in Compare Time with the Fifth National Climate Assessment figure gallery.
+
+Regional comparison rebuild:
+Page 1: event videos + accessible summaries
+- Pacific Northwest heat: TcU8YNYQmGg
+- Waverly rainfall: gDvWd8uphXk
+
+Page 2: climate explanation videos + interactive mechanism + evidence meter
+- Heat climate explanation: LdRV9OjpYEY
+- Rain/flood climate explanation: w-dbv4F4i3k
+
+Page 3: existing summary question
+
+YouTube embeds use youtube-nocookie.com.
