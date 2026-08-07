@@ -1,63 +1,9 @@
 "use strict";
-
-const screens=[...document.querySelectorAll(".screen")];
-const steps=[...document.querySelectorAll(".progress-step")];
-const previous=document.querySelector("#previous");
-const next=document.querySelector("#next");
-const position=document.querySelector("#position");
-let current=0;
-
+const screens=[...document.querySelectorAll(".screen")],steps=[...document.querySelectorAll(".progress-step")],previous=document.querySelector("#previous"),next=document.querySelector("#next"),position=document.querySelector("#position");let current=0;
 const correct={regions:"b",seasons:"a",time:"a"};
-const messages={
-  regions:"Correct. The comparison holds the year and season constant and shows regional variation in extreme weather.",
-  seasons:"Correct. The comparison holds the year and region constant and shows seasonal variation in extreme weather.",
-  time:"Correct. Long-term records reveal changes in frequency or intensity that cannot be identified from one event."
-};
-
-function show(index){
-  current=Math.max(0,Math.min(index,screens.length-1));
-  screens.forEach((screen,i)=>screen.classList.toggle("active",i===current));
-  steps.forEach((step,i)=>{
-    step.classList.toggle("active",i===current);
-    step.classList.toggle("complete",i<current);
-  });
-  previous.disabled=current===0;
-  next.disabled=current===screens.length-1;
-  position.textContent=`${steps[current].textContent}: ${current+1} of ${screens.length}`;
-  window.scrollTo({top:0,behavior:"smooth"});
-}
-
-steps.forEach((step,i)=>step.addEventListener("click",()=>show(i)));
-document.querySelector(".begin").addEventListener("click",()=>show(1));
-previous.addEventListener("click",()=>show(current-1));
-next.addEventListener("click",()=>show(current+1));
-
-document.querySelectorAll(".check-answer").forEach(button=>{
-  button.addEventListener("click",()=>{
-    const fieldset=button.closest("fieldset");
-    const id=fieldset.dataset.question;
-    const selected=fieldset.querySelector(`input[name="${id}"]:checked`);
-    const feedback=fieldset.querySelector(".feedback");
-    if(!selected){
-      feedback.className="feedback incorrect";
-      feedback.textContent="Choose an answer before checking.";
-      return;
-    }
-    const isCorrect=selected.value===correct[id];
-    feedback.className=`feedback ${isCorrect?"correct":"incorrect"}`;
-    feedback.textContent=isCorrect
-      ? messages[id]
-      : "Not quite. Review what stayed the same and what changed, then try again.";
-  });
-});
-
-document.querySelector(".restart").addEventListener("click",()=>{
-  document.querySelectorAll('input[type="radio"]').forEach(input=>input.checked=false);
-  document.querySelectorAll(".feedback").forEach(feedback=>{
-    feedback.textContent="";
-    feedback.className="feedback";
-  });
-  show(0);
-});
-
-show(0);
+const messages={regions:"Correct. The year and season stayed the same, while the region and type of extreme weather changed.",seasons:"Correct. The region and year stayed the same, while the season and type of extreme weather changed.",time:"Correct. Long-term records reveal changes in frequency or intensity that cannot be seen from one event."};
+const names={0:"Start",1:"Regions: stories",2:"Regions: comparison",3:"Regions: question",4:"Seasons: stories",5:"Seasons: comparison",6:"Seasons: question",7:"Time: evidence",8:"Time: comparison",9:"Time: question",10:"Summary"};
+function show(i){current=Math.max(0,Math.min(i,screens.length-1));screens.forEach((s,n)=>s.classList.toggle("active",n===current));steps.forEach(step=>{const t=Number(step.dataset.go);const group=(t===1&&current>=1&&current<=3)||(t===4&&current>=4&&current<=6)||(t===7&&current>=7&&current<=9);step.classList.toggle("active",t===current||group);step.classList.toggle("complete",t<current)});previous.disabled=current===0;next.disabled=current===screens.length-1;position.textContent=`${names[current]} · ${current+1} of ${screens.length}`;window.scrollTo({top:0,behavior:"smooth"})}
+steps.forEach(s=>s.addEventListener("click",()=>show(Number(s.dataset.go))));document.querySelector(".begin").addEventListener("click",()=>show(1));previous.addEventListener("click",()=>show(current-1));next.addEventListener("click",()=>show(current+1));
+document.querySelectorAll(".check-answer").forEach(btn=>btn.addEventListener("click",()=>{const f=btn.closest("fieldset"),id=f.dataset.question,sel=f.querySelector(`input[name="${id}"]:checked`),fb=f.querySelector(".feedback");if(!sel){fb.className="feedback incorrect";fb.textContent="Choose an answer before checking.";return}const ok=sel.value===correct[id];fb.className=`feedback ${ok?"correct":"incorrect"}`;fb.textContent=ok?messages[id]:"Not quite. Review the comparison on the previous page and try again."}));
+document.querySelector(".restart").addEventListener("click",()=>{document.querySelectorAll('input[type="radio"]').forEach(i=>i.checked=false);document.querySelectorAll(".feedback").forEach(f=>{f.textContent="";f.className="feedback"});show(0)});show(0);
