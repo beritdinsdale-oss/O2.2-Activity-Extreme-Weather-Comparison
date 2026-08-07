@@ -16,9 +16,8 @@ Changes:
 - External videos remain optional and open in new tabs.
 - Essential information remains in the activity for accessibility.
 
-Climate-science media revision:
-- Replaced disaster-focused news stories with science-focused media.
-- Embedded NASA AIRS visualization for the 2021 Pacific Northwest heat wave.
-- Added NOAA heavy-precipitation climate mechanism visual/explanation.
-- Reframed the ice-storm page around freezing-rain science and uncertainty.
-- Kept essential explanations in text so media are supplemental.
+Visual explainer revision:
+- Removed broken external embeds.
+- Removed archived NOAA Climate.gov dependency.
+- Added self-contained heat, heavy-precipitation, and freezing-rain visuals.
+- Updated optional links to current NASA and Fifth National Climate Assessment resources.
